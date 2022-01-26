@@ -1,0 +1,16 @@
+﻿<h1>¡Hola! {{currentUser.firstName}}</h1>
+<p>¡Bienvenido a la pagina principal del sistema!</p>
+<h3>Todos los usuarios registrados:</h3>
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Eliminar usuario</a>
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a (click)="deleteUser(user.id)" class="text-danger">Habilitar usuario</a>
+    </li>
+</ul>
